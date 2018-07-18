@@ -12,7 +12,8 @@ class Index extends Controller
            // ->where('id', 1)
            // ->find();
         //dump($result);'
-        echo "<H1>微前欢迎您!</H1>";
+        //echo "<H1>微前欢迎您!</H1>";
+        return $this->fetch('index/Index');
         
     }
 
