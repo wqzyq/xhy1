@@ -8,15 +8,13 @@ class Index extends Controller
     public function index(){
         //第一个Hello World!实例
        // echo "Hello World!";
-        $result = Db::name('data')
-            ->where('id', 1)
-            ->find();
-        dump($result);
+       // $result = Db::name('data')
+           // ->where('id', 1)
+           // ->find();
+        //dump($result);'
+        echo "<H1>微前欢迎您!</H1>";
+        
     }
-//    public function index()
-//    {
-//        return "<H1>欢迎光临微前教育！</H1>";
-//    }
 
     public function index1($name = '张三')
     {
