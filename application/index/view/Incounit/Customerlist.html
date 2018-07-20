@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户列表</title>
+</head>
+<body>
+<a href="{:url('index/index/index')}">首页</a>
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>单位名称</th>
+        <th>所在银行</th>
+        <th>操作</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {volist name="list" id="vo"}
+    <tr>
+        <td>{$vo.id}</td>
+        <td>{$vo.UnitName}</td>
+        <td>{$vo.Bank}</td>
+         <td>
+             <a href="{:url('index/incounit/cueditlist',array('id'=>$vo['id']))}">编辑
+             <a href="{:url('index/incounit/customerdel',array('id'=>$vo['id']))}">删除</a>
+        </td>
+
+    </tr>
+    {/volist}
+    </tbody>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户资料修改</title>
+</head>
+<body>
+<form action="{:url('index/incounit/cueditsave')}" method="post">
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>单位名称</th>
+        <th>所在银行</th>
+    </tr>
+    </thead>
+    <tbody>
+    {volist name="list" id="vo"}
+    <tr>
+        <td><input type="text" name="id" value={$vo.id}></td>
+        <td><input type="text" name="UnitName" value={$vo.UnitName}></td>
+        <td><input type="text" name="Bank" value={$vo.Bank}></td>
+    </tr>
+    {/volist}
+    </tbody>
+</table>
+    <input type="submit" value="修改">
+</form>
+</body>
+</html>
