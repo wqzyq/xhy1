@@ -6,7 +6,6 @@
  * Time: 10:37
  */
 namespace app\index\controller;
-
 use app\index\model\User as UserModel;
 use think\Controller;
 
@@ -18,10 +17,9 @@ class User extends Controller
         //视图输出
         $list = UserModel::all();
         //dump($list);
-        $this->assign('list', $list);
+        $this->assign('list', $list);        
         $this->assign('count', count($list));
         return $this->fetch();
-
     }
 
     public function data()
@@ -35,22 +33,27 @@ class User extends Controller
         $pwd = input('pwd');
         $pwd1 = input('pwd1');
         $phone = input('phone');
-        $enpriName = input('enpriName');
+        $enpriName = input('enpriName');       
         $user = UserModel::where('userName', $userName)->where('enpriName', $enpriName)->limit(1)->select();
+        //dump($user);die;
         if ($user) {
+            echo "您的会员名或者企业名称重复，请检查！";
+        } else {          
             if ($pwd == $pwd1) {
                 if (request()->isPost()) {
                     $data = [
                         'userName' => $userName,
                         'pwd' => $pwd,
                         'phone' => $phone,
-                        '$enpriName' => $enpriName,
-                    ];
+                        'enpriName' => $enpriName,
+                        'userType'=>'01',//企业类型
+                    ];                        
                     $user = new UserModel();
                     $user->userName = $data['userName'];
                     $user->pwd = $data['pwd'];
                     $user->phone = $data['phone'];
                     $user->enpriName = $data['enpriName'];
+                    $user->userType=$data['userType'];
                     if ($user->save()) {
                         return '用户[ ' . $user->userName . ' ]新增成功';
                     } else {
@@ -60,10 +63,8 @@ class User extends Controller
                 }
                 return $this->fetch();
             } else {
-                echo "您输入的密码不对，请重新输入！";
-            }
-        } else {
-            echo "您的会员名或者企业名称重复，请检查！";
+                echo "您两次输入的密码不相同，请重新输入！";
+            }          
         }
     }
 

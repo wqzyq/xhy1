@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>广东新华粤公司网站</title>
     <link href="../../public/static/bootstrap/css/bootstarp.min.css" rel="stylesheet">
 </head>
+
 <body>
-<a href="{:url('index/incounit/index')}">客户注册</a>
-<a href="{:url('index/incounit/customerlist')}">客户列表</a>
+    <a href="{:url('index/incounit/index')}">客户注册</a>
+    <a href="{:url('index/incounit/customerlist')}">客户列表</a>
 
-<a href="{:url('index/incounit/index')}">个人注册</a>
-<a href="{:url('index/user/enpriregister')}">企业注册</a>
-<p>企业注册</p>
-<form action="{:url('index/user/enpriregister')}" method="post">
-    <input type="text" class="form-control" id="userName" name="userName" placeholder="设置登陆会员名">
-    <input type="text" class="form-control" id="enpriName" name="enpriName" placeholder="请填写营业执照上的公司名称">
-    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="设置您的登陆密码">
-    <input type="password" class="form-control" id="pwd1" name="pwd1" placeholder="请再次设置你的密码">
-    <input type="text" class="form-control" id="phone" name="phone" placeholder="请输入手机号码，便于找回密码">
-    <button type="submit" class="btn btn-default">同意条款并注册</button>
+    <a href="{:url('index/incounit/index')}">个人注册</a>
+    <a href="{:url('index/user/enpriregister')}">企业注册</a>
+    <p>企业注册</p>
+    <form action="{:url('index/user/enpriregister')}" method="post">
+        <input type="text" class="form-control" id="userName" name="userName" placeholder="设置登陆会员名">
+        <input type="text" class="form-control" id="enpriName" name="enpriName" placeholder="请填写营业执照上的公司名称">
+        <input type="password" class="form-control" id="pwd" name="pwd" placeholder="设置您的登陆密码">
+        <input type="password" class="form-control" id="pwd1" name="pwd1" placeholder="请再次设置你的密码">
+        <input type="text" class="form-control" id="phone" name="phone" placeholder="请输入手机号码，便于找回密码">
+        <button type="submit" class="btn btn-default">同意条款并注册</button>
 
-</form>
+    </form>
 </body>
+
 </html>
