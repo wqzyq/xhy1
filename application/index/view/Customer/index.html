@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>客户注册</title>
+    <link href="../../public/static/bootstrap/css/bootstarp.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <form action="{:url('index/customer/cusadd')}" method="post">
+        营业执照：<input id="license" name="license" type="text"><br/>
+        统一社会社会信用代码： <input id="mechanismCode" name="mechanismCode" type="text"><br/> 
+        企业名称： <input id="enterpriseName" name="enterpriseName" type="text"> <br/>
+        法定代表人： <input id="legalPerson" name="legalPerson" type="text">  <br/>
+        注册地址： <input id="registeredAddress" name="registeredAddress" type="text">  <br/>
+        注册资金： <input id="registeredCapital" name="registeredCapital" type="text">  <br/>
+        经营范围： <input id="range" name="range" type="text"> <br/> 
+        开户许可： <input id="permit" name="permit" type="text"> <br/> 
+        开户银行: <input id="bank" name="bank" type="text"><br/>  
+        对公帐号： <input id="accounts" name="accounts" type="text">  <br/>
+        企业性质： <input id="enterpriseType" name="enterpriseType" type="text">  <br/>
+        网址： <input id="website" name="website" type="text"> <br/> 
+        国家/地区： <input id="country" name="country" type="text">  <br/>
+        所在地区： <input id="area" name="area" type="text"> <br/> 
+        办公地址： <input id="officeaddress" name="officeaddress" type="text">  <br/>
+        公司电话： <input id="companyPhone" name="companyPhone" type="text"> <br/>
+        传真： <input id="fax" name="fax" type="text">  <br/>
+        联系人姓名：<input id="contactName" name="contactName" type="text">  <br/>
+        手机号码：<input id="mobilePhone" name="mobilePhone" type="text">  <br/>
+        <button type="submit">保存客户资料</button>
+    </form>
+
+</body>
+
+</html>
